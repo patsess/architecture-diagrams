@@ -1,0 +1,8 @@
+contextvars==2.4
+diagrams==0.23.1
+graphviz==0.19.1
+immutables==0.19
+Jinja2==3.0.3
+MarkupSafe==2.0.1
+pkg_resources==0.0.0
+typing_extensions==4.1.1

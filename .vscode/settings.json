@@ -1,0 +1,70 @@
+//file name: settings.json
+
+//directory for setting.json:
+//for single project: place within a '.vscode' directory at the root of project
+//for user in Windows: %APPDATA%\Code\User\settings.json
+//for user in MacOs: ~/Library/Application\ Support/Code/User/settings.json
+//for user in Linux: ~/.config/Code/User/settings.json
+
+{
+    //editor guides
+    "editor.minimap.maxColumn": 79,
+    "editor.rulers": [79, 120],  //vertical guidelines
+    //allow imports from the project root (not to be used in production)
+    "terminal.integrated.env.linux": {
+      "PYTHONPATH": "${workspaceFolder}",
+    },
+    "terminal.integrated.env.osx": {
+      "PYTHONPATH": "${workspaceFolder}",
+    },
+    "terminal.integrated.env.windows": {
+      "PYTHONPATH": "${workspaceFolder}",
+    },
+    //set Python linter (installed using pipx and located using 'which flake8')
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "/Users/<user-name>/.local/bin/flake8",
+    //enable Jedi as IntelliSense engine instead of Microsoft Python Analysis
+    //(see https://stackoverflow.com/questions/57105741/
+    // vs-code-how-to-find-all-references-of-a-variable-in-python)
+    "python.jediEnabled": true,
+    //remove trailing spaces from ends of lines
+    "files.trimTrailingWhitespace": true,
+    //ignore white space when comparing files
+    "diffEditor.ignoreTrimWhitespace": false,
+    //auto-save files
+    "files.autoSave": "afterDelay",
+    //icons
+    "workbench.iconTheme": "vscode-icons",
+    //colour theme for in-editor terminals
+    "workbench.colorCustomizations": {
+      "terminal.background":"#1D2021",
+      "terminal.foreground":"#A89984",
+      "terminalCursor.background":"#A89984",
+      "terminalCursor.foreground":"#A89984",
+      "terminal.ansiBlack":"#1D2021",
+      "terminal.ansiBlue":"#0D6678",
+      "terminal.ansiBrightBlack":"#665C54",
+      "terminal.ansiBrightBlue":"#0D6678",
+      "terminal.ansiBrightCyan":"#8BA59B",
+      "terminal.ansiBrightGreen":"#95C085",
+      "terminal.ansiBrightMagenta":"#8F4673",
+      "terminal.ansiBrightRed":"#FB543F",
+      "terminal.ansiBrightWhite":"#FDF4C1",
+      "terminal.ansiBrightYellow":"#FAC03B",
+      "terminal.ansiCyan":"#8BA59B",
+      "terminal.ansiGreen":"#95C085",
+      "terminal.ansiMagenta":"#8F4673",
+      "terminal.ansiRed":"#FB543F",
+      "terminal.ansiWhite":"#A89984",
+      "terminal.ansiYellow":"#FAC03B"
+    },
+    //recognise specific file extensions
+    "workbench.editorAssociations": [
+      {
+        "viewType": "jupyter.notebook.ipynb",
+        "filenamePattern": "*.ipynb"
+      }
+    ],
+    //specify remote machine config file
+    "remote.SSH.configFile": "<path-to-a-ssh-config-file",
+}
